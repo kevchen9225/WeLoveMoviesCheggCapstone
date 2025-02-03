@@ -12,3 +12,5 @@ knex.migrate
     app.listen(PORT, listener);
   })
   .catch(console.error);
+
+app.listen(PORT, listener);
