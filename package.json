@@ -2,7 +2,7 @@
   "name": "mock-interview-backend-coding-challenge",
   "version": "1.0.0",
   "description": "mock-interview-backend qualified challenge.",
-  "main": "src/app.js",
+  "main": "src/server.js",
   "directories": {
     "src": "src",
     "doc": "docs"
