@@ -1,23 +1,21 @@
+if (process.env.USER) require("dotenv").config();
+
 const express = require("express");
-const cors = require("cors");
-
-const errorHandler = require("./errors/errorHandler");
-const notFound = require("./errors/notFound");
-const ordersRouter = require("./orders/orders.router");
-const dishesRouter = require("./dishes/dishes.router");
-
 const app = express();
+const moviesRouter = require("./movies/movies.router");
+const theatersRouter = require("./theaters/theaters.router");
+const reviewsRouter = require("./reviews/reviews.router");
+const notFound = require("./errors/notFound");
+const errorHandler = require("./errors/errorHandler");
 
-// You have not learned about CORS yet.
-// The following line let's this API be used by any website.
-app.use(cors());
+// TODO: Add your code here
 app.use(express.json());
 
-app.use("/dishes", dishesRouter);
-app.use("/orders", ordersRouter);
+app.use("/theaters", theatersRouter);
+app.use("/movies", moviesRouter);
+app.use("/reviews", reviewsRouter);
 
 app.use(notFound);
-
 app.use(errorHandler);
 
 module.exports = app;
